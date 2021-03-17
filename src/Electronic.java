@@ -85,6 +85,7 @@ public class Electronic {
 
     public String toString()
     {
-        return "";
+        return String.format("%s-%s, cost: $%.2f", category, name, price);
+
     }
 }
