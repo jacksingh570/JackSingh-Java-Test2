@@ -19,7 +19,12 @@ public class Purchases {
 
     public double getTotalPurchasePrice()
     {
-        return -1;
+
+        int  totalPrice = 0;
+        for (int i=0; i<purchases.toArray().length; i++){
+            totalPrice = totalPrice + Integer.getInteger(purchases.toString());
+        }
+        return totalPrice;
     }
 
     public int getNumberOfItems()
@@ -43,11 +48,16 @@ public class Purchases {
     }
     public double getTotalWeight()
     {
-        int  totalPrice = 0;
-        for (int i=0; i<purchases.toArray().length; i++){
-            totalPrice = totalPrice + Integer.getInteger(purchases.toString());
+        if (purchases.isEmpty()){
+            return 0;
+        }else{
+            double list = 0;
+            for (int i=0; i<= purchases.size(); i++){
+                double weightArray = purchases.get(i).getPrice();
+                list = weightArray + purchases.get(i).getPrice();
+            }
+            return list;
         }
-        return totalPrice;
     }
 
     public double getAvgWeight()
