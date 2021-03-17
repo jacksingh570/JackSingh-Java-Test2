@@ -24,7 +24,12 @@ public class Purchases {
 
     public int getNumberOfItems()
     {
-        return -1;
+        if (purchases.size() == 0){
+            return 0;
+        }else{
+            return purchases.size();
+        }
+
     }
 
     public ArrayList<String> getUniqueCategoriesInPurchase()
