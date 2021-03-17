@@ -5,6 +5,7 @@ public class Purchases {
 
     public Purchases()
     {
+        purchases = new ArrayList<Electronic>();
     }
 
     public ArrayList<Electronic> getPurchases() {
@@ -13,6 +14,7 @@ public class Purchases {
 
     public void addElectronic(Electronic newElectronic)
     {
+        purchases.add(newElectronic);
     }
 
     public double getTotalPurchasePrice()
