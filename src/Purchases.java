@@ -32,11 +32,15 @@ public class Purchases {
 
     }
 
-    public ArrayList<String> getUniqueCategoriesInPurchase()
-    {
-        return null;
+    public ArrayList<String> getUniqueCategoriesInPurchase() {
+        ArrayList<String> uCategory = new ArrayList<>();
+        uCategory.add(String.valueOf(purchases));
+        if(uCategory.isEmpty()){
+            return uCategory;
+        }else{
+            return uCategory;
+        }
     }
-
     public double getTotalWeight()
     {
         int  totalPrice = 0;
