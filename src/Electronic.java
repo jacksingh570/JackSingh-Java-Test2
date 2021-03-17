@@ -68,6 +68,11 @@ public class Electronic {
     }
 
     public void setPrice(double price) {
+        if(price >= 0 && price <= 10000){
+            this.price =price;
+        }else{
+            throw new IllegalArgumentException("price need to be between 0 and 10000");
+        }
     }
 
     public void setWeight(double weight) {
