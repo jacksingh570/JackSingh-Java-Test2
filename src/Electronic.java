@@ -76,6 +76,11 @@ public class Electronic {
     }
 
     public void setWeight(double weight) {
+        if (weight >= 0 && weight <= 500){
+            this.weight = weight;
+        }else{
+            throw new IllegalArgumentException("The weight must be between 1 and 500");
+        }
     }
 
     public String toString()
