@@ -47,6 +47,13 @@ public class Electronic {
     }
 
     public void setCategory(String category) {
+        category.toLowerCase();
+        List<String> categoryList = Arrays.asList("cell phones", "home theater", "computers");
+        if (categoryList.contains(category)){
+            this.category = category;
+        }else{
+            throw new IllegalArgumentException("The category must be one of the following three; cell phones, home theater or computers");
+        }
     }
 
     public void setBrand(String brand) {
