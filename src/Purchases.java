@@ -64,11 +64,16 @@ public class Purchases {
     {
         double weight = 0;
         double average = 0;
-        for(int i=0; i <= purchases.size(); i++){
-            weight = purchases.get(i).getWeight();
-            weight += weight;
+        if(purchases.isEmpty()){
+            return 0;
+        }else {
+
+            for (int i = 0; i <= purchases.size(); i++) {
+                weight = purchases.get(i).getWeight();
+                weight += weight;
+            }
+            average = weight / 2;
         }
-        average = weight/2;
         return average;
     }
 
@@ -87,6 +92,18 @@ public class Purchases {
 
     public String toString()
     {
-        return "";
+        String names = "";
+        if(purchases.isEmpty()){
+            return "No purchases";
+        }else {
+            for (int i = 0; i <= purchases.toArray().length; i++) {
+                if (i == purchases.size()) {
+                    names = names + purchases.get(i).getName();
+                } else {
+                    names = names + ", ";
+                }
+            }
+        }
+        return names;
     }
 }
