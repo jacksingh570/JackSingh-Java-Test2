@@ -39,6 +39,11 @@ public class Electronic {
     }
 
     public void setName(String name) {
+        if (name.length() >= 2 && name.length() <= 20) {
+            name.trim();
+        }else{
+            throw new IllegalArgumentException("The name must be between 2 and 20 characters");
+        }
     }
 
     public void setCategory(String category) {
