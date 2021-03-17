@@ -62,7 +62,14 @@ public class Purchases {
 
     public double getAvgWeight()
     {
-        return -1;
+        double weight = 0;
+        double average = 0;
+        for(int i=0; i <= purchases.size(); i++){
+            weight = purchases.get(i).getWeight();
+            weight += weight;
+        }
+        average = weight/2;
+        return average;
     }
 
     public Electronic getMostExpensive()
