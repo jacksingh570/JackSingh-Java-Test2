@@ -34,7 +34,11 @@ public class Purchases {
 
     public double getTotalWeight()
     {
-        return -1;
+        int  totalPrice = 0;
+        for (int i=0; i<purchases.toArray().length; i++){
+            totalPrice = totalPrice + Integer.getInteger(purchases.toString());
+        }
+        return totalPrice;
     }
 
     public double getAvgWeight()
