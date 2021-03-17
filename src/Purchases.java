@@ -74,7 +74,15 @@ public class Purchases {
 
     public Electronic getMostExpensive()
     {
-        return new Electronic("Wazoo","computers","Acer",0.01,0.01);
+        double mostExpensive = 0;
+        Electronic biggestPrice = null;
+        for(int i=0; i<purchases.size(); i++){
+            if(purchases.get(i).getPrice() > mostExpensive){
+                mostExpensive = purchases.get(i).getPrice();
+                biggestPrice = new Electronic(purchases.get(i).getName(), purchases.get(i).getCategory(), purchases.get(i).getBrand(), mostExpensive, purchases.get(i).getWeight());
+            }
+        }
+        return biggestPrice;
     }
 
     public String toString()
