@@ -57,6 +57,14 @@ public class Electronic {
     }
 
     public void setBrand(String brand) {
+        brand.toLowerCase();
+        brand.toUpperCase();
+        List<String> brands = Arrays.asList("Acer", "Apple", "Dell", "Eurocom", "Google", "Microsoft", "Samsung", "Sony", "Sonos");
+        if (brands.contains(brand)){
+            this.brand = brand;
+        }else{
+            throw new IllegalArgumentException("You must enter a valid brand");
+        }
     }
 
     public void setPrice(double price) {
